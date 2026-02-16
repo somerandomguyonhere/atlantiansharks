@@ -1,206 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Atlantian Sharks LLC</title>
-<link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Atlantian Sharks LLC</title>
+    <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Minecraftia', sans-serif;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Minecraftia', sans-serif;
+        }
 
-body {
-    background: linear-gradient(180deg, #000814, #001d3d 50%, #002b5c 100%);
-    color: white;
-    overflow-x: hidden;
-}
+        body {
+            background: linear-gradient(180deg, #000814, #001d3d 50%, #002b5c 100%);
+            color: white;
+            overflow-x: hidden;
+        }
 
-body::before {
-    content: "";
-    position: fixed;
-    width: 200%;
-    height: 200%;
-    background: repeating-linear-gradient(
-        45deg,
-        rgba(0, 200, 255, 0.025),
-        rgba(0, 200, 255, 0.025) 2px,
-        transparent 2px,
-        transparent 6px
-    );
-    animation: shimmer 14s linear infinite;
-    z-index: 0;
-}
+        body::before {
+            content: "";
+            position: fixed;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(45deg,
+                    rgba(0, 200, 255, 0.025),
+                    rgba(0, 200, 255, 0.025) 2px,
+                    transparent 2px,
+                    transparent 6px);
+            animation: shimmer 14s linear infinite;
+            z-index: 0;
+        }
 
-@keyframes shimmer {
-    from { transform: translateX(0); }
-    to { transform: translateX(-250px); }
-}
+        @keyframes shimmer {
+            from {
+                transform: translateX(0);
+            }
 
-.bBody {
-    position: relative;
-    z-index: 1;
-    padding: 100px 10% 40px 10%;
-    text-align: center;
-}
+            to {
+                transform: translateX(-250px);
+            }
+        }
 
-.bBody h1 {
-    font-size: 2.8rem;
-    letter-spacing: 2px;
-}
+        .bBody {
+            position: relative;
+            z-index: 1;
+            padding: 100px 10% 40px 10%;
+            text-align: center;
+        }
 
-.sub {
-    margin-top: 12px;
-    font-size: 0.9rem;
-    color: #38bdf8;
-}
+        .bBody h1 {
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+        }
 
-.infoBox {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 60px;
-    background: rgba(0,0,0,0.65);
-    padding: 55px;
-    border-radius: 20px;
-    border: 1px solid rgba(0,200,255,0.6);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 50px rgba(255,215,0,0.08);
-    text-align: left;
-}
+        .sub {
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: #38bdf8;
+        }
 
-.section {
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #00e5ff;
-    margin-bottom: 15px;
-}
+        .infoBox {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 60px;
+            background: rgba(0, 0, 0, 0.65);
+            padding: 55px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 200, 255, 0.6);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.08);
+            text-align: left;
+        }
 
-.infoBox p {
-    line-height: 1.6;
-    font-size: 0.75rem;
-    margin-bottom: 30px;
-}
+        .section {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #00e5ff;
+            margin-bottom: 15px;
+        }
 
-.highlight {
-    color: gold;
-}
+        .infoBox p {
+            line-height: 1.6;
+            font-size: 0.75rem;
+            margin-bottom: 30px;
+        }
 
-.LFG {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
+        .highlight {
+            color: gold;
+        }
 
-
-.LFG span {
-    padding: 8px 14px;
-    border-radius: 6px;
-    background: rgba(0,200,255,0.15);
-    border: 1px solid rgba(0,200,255,0.6);
-    font-size: 0.75rem;
-}
+        .LFG {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
 
 
-.joinUs {
-    margin-top: 100px;
-    font-size: 2rem;
-    line-height: 1.4;
-}
+        .LFG span {
+            padding: 8px 14px;
+            border-radius: 6px;
+            background: rgba(0, 200, 255, 0.15);
+            border: 1px solid rgba(0, 200, 255, 0.6);
+            font-size: 0.75rem;
+        }
 
-.button {
-    margin-top: 40px;
-}
 
-.button button {
-    padding: 16px 50px;
-    font-size: 0.9rem;
-    border-radius: 40px;
-    border: none;
-    cursor: pointer;
-    background: linear-gradient(90deg, gold, #b8860b);
-    transition: 0.3s ease;
-}
+        .joinUs {
+            margin-top: 100px;
+            font-size: 2rem;
+            line-height: 1.4;
+        }
 
-.button button:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 35px gold;
-}
+        .button {
+            margin-top: 40px;
+        }
 
-.footer {
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 0.6rem;
-    opacity: 0.6;
-}
-</style>
+        .button button {
+            padding: 16px 50px;
+            font-size: 0.9rem;
+            border-radius: 40px;
+            border: none;
+            cursor: pointer;
+            background: linear-gradient(90deg, gold, #b8860b);
+            transition: 0.3s ease;
+        }
+
+        .button button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 35px gold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.6rem;
+            opacity: 0.6;
+        }
+
+        .members {
+            position: fixed;
+            top: 25px;
+            right: 40px;
+            z-index: 999;
+        }
+
+        .members button {
+            padding: 12px 28px;
+            font-size: 0.75rem;
+            border-radius: 40px;
+            border: none;
+            cursor: pointer;
+            background: linear-gradient(90deg, gold, #b8860b);
+            transition: 0.3s ease;
+        }
+
+        .members button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 25px gold;
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="bBody">
-    <h1>The Atlantian Sharks LLC</h1>
-    <div class="sub">Ruled by VenoLao</div>
-
-    <div class="infoBox">
-
-        <div>
-            <div class="section">ABOUT US</div>
-            <p>
-                We are a company starting from nothing. But under 
-                our company's leadership  we will build this company into a financial powerhouse worthy enough to claim the title of the richest in the world. We are a nation that doesn't take a NO for an answer, we are a nation that makes sure to reward loyalty, we are a nation that thinks strategically, we are a nation that uses manipulation to increase our riches, we are a nation of <b style="color: #00e5ff;">SHARKS</b>.
-                <br>
-                We take heavy inspiration from New York with Medieval undertones and Redstone Punk themes mixed in.
-            </p>
-
-
+    <div class="bBody">
+        <h1>The Atlantian Sharks LLC</h1>
+        <div class="sub">Ruled by VenoLao</div>
+        <div class="members">
+            <a href="/memberlist">
+                <button>View Members</button>
+            </a>
         </div>
 
-        <div>
-            <div class="section">WHAT WE OFFER</div>
-            <p>
-                A company is nothing without their workers, and as such we cannot build a company alone. this company needs disciplined, strategic, intelligent, and ambitious people who are ready to take on the role of being a <b style="color: #00e5ff;">SHARK</b>.
-                If you are that person, this company will make you richer and powerful than you can possibly imagine.
-            </p>
+        <div class="infoBox">
 
-            <div class="section">WHAT WE ARE LOOKING FOR</div>
-            <div class="LFG">
-                <span>Builders</span>
-                <span>PvPers</span>
-                <span>Captialists</span>
-                <span>Entrepreneurs</span>
-                <span>Grinders</span>
-                <span>Active NA Players</span>
+            <div>
+                <div class="section">ABOUT US</div>
+                <p>
+                    We are a company starting from nothing. But under
+                    our company's leadership we will build this company into a financial powerhouse worthy enough to claim the title of the richest in the world. We are a nation that doesn't take a NO for an answer, we are a nation that makes sure to reward loyalty, we are a nation that thinks strategically, we are a nation that uses manipulation to increase our riches, we are a nation of <b style="color: #00e5ff;">SHARKS</b>.
+                    <br>
+                    We take heavy inspiration from New York with Medieval undertones and Redstone Punk themes mixed in.
+                </p>
+
+
             </div>
+
+            <div>
+                <div class="section">WHAT WE OFFER</div>
+                <p>
+                    A company is nothing without their workers, and as such we cannot build a company alone. this company needs disciplined, strategic, intelligent, and ambitious people who are ready to take on the role of being a <b style="color: #00e5ff;">SHARK</b>.
+                    If you are that person, this company will make you richer and powerful than you can possibly imagine.
+                </p>
+
+                <div class="section">WHAT WE ARE LOOKING FOR</div>
+                <div class="LFG">
+                    <span>Builders</span>
+                    <span>PvPers</span>
+                    <span>Captialists</span>
+                    <span>Entrepreneurs</span>
+                    <span>Grinders</span>
+                    <span>Active NA Players</span>
+                </div>
+            </div>
+
         </div>
 
+        <div class="joinUs">
+            <b> CHOOSE THE <span class="highlight">ONLY</span> CORRECT OPTION.<br>
+                JOIN US.<br>
+                BECOME <span class="highlight">UNSTOPPABLE.</span> </b>
+        </div>
+
+        <div class="button">
+            <button>Secure Your Place</button>
+        </div>
     </div>
 
-    <div class="joinUs">
-        <b> CHOOSE THE <span class="highlight">ONLY</span> CORRECT OPTION.<br>
-        JOIN US.<br>
-        BECOME <span class="highlight">UNSTOPPABLE.</span> </b>
+    <div class="footer">
+        Rule the Seas. Own the Economy. <br>
+        Made By Jake (Jakeyboiishere on Discord)
     </div>
-
-    <div class="button">
-        <button>Secure Your Place</button>
-    </div>
-</div>
-
-<div class="footer">
-    Rule the Seas. Own the Economy. <br>
-    Made By Jake (Jakeyboiishere on Discord)
-</div>
-
-<script>
-    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/speed-insights/script.js"></script>
 
 </body>
+
 </html>
